@@ -1,0 +1,269 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 280px;
+    min-width: 280px;
+    background: #1e1e1e;
+    border-right: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+    background: #2563eb;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.brand h2 {
+    font-size: 19px;
+}
+
+.new-chat-btn {
+    width: 100%;
+    padding: 13px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.new-chat-btn:hover {
+    background: #1d4ed8;
+}
+
+.sidebar-section {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.section-title {
+    color: #888;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.conversation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.empty-text {
+    color: #777;
+    font-size: 13px;
+}
+
+.sidebar-bottom {
+    border-top: 1px solid #333;
+    padding-top: 18px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    background: #444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-profile strong {
+    display: block;
+    font-size: 13px;
+}
+
+.user-profile small {
+    color: #888;
+    font-size: 11px;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.topbar {
+    height: 75px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.topbar h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.status {
+    color: #888;
+    font-size: 12px;
+}
+
+.clear-btn {
+    background: transparent;
+    color: #bbb;
+    border: 1px solid #444;
+    padding: 9px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.clear-btn:hover {
+    background: #333;
+}
+
+/* CHAT AREA */
+
+.chat-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 30px 20px;
+}
+
+.chat-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.welcome-screen {
+    text-align: center;
+    margin-top: 15vh;
+}
+
+.welcome-screen h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.welcome-screen p {
+    color: #999;
+    font-size: 15px;
+}
+
+/* MESSAGE INPUT */
+
+.input-area {
+    padding: 20px;
+    border-top: 1px solid #333;
+}
+
+.input-container {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    gap: 12px;
+    background: #1e1e1e;
+    border: 1px solid #444;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+#messageInput {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    resize: none;
+    padding: 10px;
+    min-height: 42px;
+}
+
+#sendBtn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+#sendBtn:hover {
+    background: #1d4ed8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: 75px;
+        min-width: 75px;
+        padding: 12px;
+    }
+
+    .brand h2,
+    .new-chat-btn,
+    .sidebar-section,
+    .user-profile strong,
+    .user-profile small {
+        display: none;
+    }
+
+    .brand {
+        justify-content: center;
+    }
+
+    .user-profile {
+        justify-content: center;
+    }
+
+    .topbar {
+        padding: 0 15px;
+    }
+
+    .welcome-screen h1 {
+        font-size: 24px;
+    }
+}

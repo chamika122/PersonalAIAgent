@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal AI Agent</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">AI</div>
+            <h2>Personal AI</h2>
+        </div>
+
+        <button id="newChatBtn" class="new-chat-btn">
+            + New Chat
+        </button>
+
+        <div class="sidebar-section">
+            <p class="section-title">YOUR CONVERSATIONS</p>
+            <div id="conversationList" class="conversation-list">
+                <p class="empty-text">Loading conversations...</p>
+            </div>
+        </div>
+
+        <div class="sidebar-bottom">
+            <div class="user-profile">
+                <div class="avatar">U</div>
+                <div>
+                    <strong>My Assistant</strong>
+                    <small>Personal Workspace</small>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h3>AI Assistant</h3>
+                <span id="connectionStatus" class="status">
+                    Checking connection...
+                </span>
+            </div>
+            <button id="clearChatBtn" class="clear-btn">
+                Clear Chat
+            </button>
+        </header>
+
+        <section id="chatArea" class="chat-area">
+            <div id="welcomeScreen" class="welcome-screen">
+                <div class="welcome-icon">✦</div>
+                <h1>How can I help you today?</h1>
+                <p>Your personal AI assistant is ready.</p>
+
+                <div class="suggestions">
+                    <button class="suggestion">
+                        What can you help me with?
+                    </button>
+                    <button class="suggestion">
+                        Tell me about my projects
+                    </button>
+                    <button class="suggestion">
+                        Help me learn programming
+                    </button>
+                </div>
+            </div>
+
+            <div id="messagesContainer" class="messages-container"></div>
+        </section>
+
+        <footer class="chat-footer">
+            <div class="input-wrapper">
+                <textarea
+                    id="messageInput"
+                    placeholder="Message your AI assistant..."
+                    rows="1"
+                ></textarea>
+
+                <button id="sendBtn" class="send-btn">
+                    ↑
+                </button>
+            </div>
+
+            <p class="footer-note">
+                Personal AI Agent · Powered by Ollama
+            </p>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
